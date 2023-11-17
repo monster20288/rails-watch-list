@@ -1,0 +1,13 @@
+  <div class="container mt-5">
+    <div class="row">
+      <h1> My Lists</h1>
+      <% @lists.each do |list| %>
+      <div class="col-md-4">
+        <div class="card-category " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/5662857/pexels-photo-5662857.png)">
+          <%= list.name %>
+        </div>
+        <h2><%= link_to "View", list_path(list), class: "btn btn-primary my-2" %></h2>
+      </div>
+      <% end %>
+    </div>
+  </div>

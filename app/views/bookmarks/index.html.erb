@@ -1,0 +1,12 @@
+  <div class="container mt-5">
+    <div class="row">
+      <h1> My Lists</h1>
+      <% @bookmarks.each do |bookmark| %>
+      <div class="col-md-4">
+        <div class="card-category " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/5662857/pexels-photo-5662857.png)">
+          <%= bookmark.comment %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
