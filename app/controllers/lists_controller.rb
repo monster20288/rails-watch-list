@@ -1,12 +1,11 @@
 class ListsController < ApplicationController
   def index
    @lists = List.all
+   @movies = Movie.all
   end
 
   def show
     @list = List.find(params[:id])
-    @movieid = Bookmark.where(list_id: @list)
-    @movie= @movieid.count
   end
 
   def new
@@ -28,6 +27,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 end
